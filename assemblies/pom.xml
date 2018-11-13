@@ -13,6 +13,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>feature</module>
     <module>platform-plugin</module>
   </modules>
 

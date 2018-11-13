@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.hitachivantara</groupId>
+    <artifactId>my-project-assemblies</artifactId>
+    <version>9.0.0.0-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>my-project-feature</artifactId>
+  <packaging>feature</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.hitachivantara</groupId>
+      <artifactId>my-project-core-osgi-impl</artifactId>
+      <version>9.0.0.0-SNAPSHOT</version>
+      <!-- It is bad to need to do this exclusion to prevent non OSGi stuff to be included -->
+      <exclusions>
+        <exclusion>
+          <groupId>org.hitachivantara</groupId>
+          <artifactId>my-project-core-impl</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.karaf.tooling</groupId>
+        <artifactId>karaf-maven-plugin</artifactId>
+        <version>3.0.8</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
