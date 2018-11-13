@@ -5,11 +5,12 @@
 
   <parent>
     <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-ce-jar-parent-pom</artifactId>
+    <artifactId>pentaho-ce-bundle-parent-pom</artifactId>
     <version>9.0.0.0-SNAPSHOT</version>
   </parent>
 
   <groupId>org.hitachivantara</groupId>
   <artifactId>my-project-core-api</artifactId>
+  <packaging>bundle</packaging>
   
 </project>
